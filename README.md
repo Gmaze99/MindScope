@@ -14,7 +14,7 @@
 ---
 
 ## 🏗 Tech Stack
-| Layer          | Choice                        |
+| Layer         | Choice                        |
 |---------------|-------------------------------|
 | Frontend      | React (TypeScript)            |
 | Backend       | Python (FastAPI)              |
@@ -22,7 +22,8 @@
 | AI/NLP        | OpenAI / HuggingFace API      |
 | Containers    | Docker                        |
 | Orchestration | Kubernetes (AWS EKS)          |
-| CI/CD         | GitHub Actions                |
+| CI            | GitHub Actions                |
+| CD            | Jenkins                       |
 | Infra         | Terraform, Ansible            |
 | Observability | Prometheus, Grafana, ELK      |
 | Security      | Trivy, Snyk, SonarQube, Bandit|
@@ -43,10 +44,12 @@
 ## 🧭 Roadmap
 
 - ✅ Project skeleton & README
-- ⬜ Build backend API with FastAPI
-- ⬜ Build React frontend
-- ⬜ Dockerize apps
-- ⬜ Local orchestration with docker-compose
+- ✅ Build backend API with FastAPI
+- ✅ Build React frontend
+- ✅ Dockerize apps
+- ✅ Local orchestration with docker-compose
+- ⬜ Provision CI Pipelines with Github Actions
+- ⬜ Provision CD with Jenkins
 - ⬜ Provision EKS & RDS with Terraform
 - ⬜ Deploy to AWS
 - ⬜ Add monitoring & logging
