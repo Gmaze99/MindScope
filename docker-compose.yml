@@ -12,11 +12,11 @@ services:
     ports:
       - "3000:80"
 
-  sonarqube:
-    container_name: sonarqube
+  sonarqube_v1:
+    container_name: sonarqube_v1
     image: sonarqube
     depends_on:
-        - sonarqube-database
+        - sonarqube-db
     environment:
         - SONARQUBE_JDBC_USERNAME=sonarqube
         - SONARQUBE_JDBC_PASSWORD=sonarpass
@@ -29,8 +29,8 @@ services:
     ports:
         - 9000:9000
 
-  sonarqube-database:
-      container_name: sonarqube-database
+  sonarqube-db:
+      container_name: sonarqube_db
       image: postgres:12
       environment:
           - POSTGRES_DB=sonarqube
