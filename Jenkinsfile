@@ -25,17 +25,17 @@ pipeline {
         }
         stage("Create Infrastructure for PROD"){
             steps{
-            sh "terraform  -chdir=./deploy/terraformscripts init"
-            sh "terraform -chdir=./deploy/terraformscripts apply --auto-approve"
+            sh "terraform  -chdir=deploy/terraformscripts init"
+            sh "terraform -chdir=deploy/terraformscripts apply --auto-approve"
             sh "sleep 30" //giving some time for infrastructure to be up and running..
             sh "pwd"
-            sh "cp ./deploy/terraformscripts/inventory ./deploy/playbooks/inventory"
+            sh "cp deploy/terraformscripts/inventory deploy/playbooks/inventory"
             echo "Infrastructure is up and running.."
             }
         }
         stage("Configure k8s cluster on the created infrastructure") {
             environment {
-                ANSIBLE_DIR = './deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
+                ANSIBLE_DIR = 'deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
             }
             steps {
                 dir("${ANSIBLE_DIR}") {
@@ -48,7 +48,7 @@ pipeline {
         }
         stage("Configure Monitoring Tool"){
             environment {
-                ANSIBLE_DIR = './deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
+                ANSIBLE_DIR = 'deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
             }
             steps{
                 dir("${ANSIBLE_DIR}") {
@@ -59,7 +59,7 @@ pipeline {
         }
         stage("Deploy the Webserver"){
             environment {
-                ANSIBLE_DIR = './deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
+                ANSIBLE_DIR = 'deploy/playbooks' // Adjust this to the directory containing your ansible.cfg
             }
             steps{
                 dir("${ANSIBLE_DIR}") {
