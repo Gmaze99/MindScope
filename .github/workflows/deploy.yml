@@ -27,10 +27,3 @@ jobs:
         context: ./backend
         push: true
         tags: jinny1/snakegame:latest
-
-    - name: 📦 Build & push frontend image
-      uses: docker/build-push-action@v4
-      with:
-        context: ./frontend
-        push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/wellness-frontend:latest
