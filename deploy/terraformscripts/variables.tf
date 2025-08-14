@@ -10,7 +10,7 @@ variable "x"{
 
 variable "instanceTagName"{
     type = string
-    default = "GFGTerraform"
+    default = "MindScope"
 }
 
 variable "sg_name"{

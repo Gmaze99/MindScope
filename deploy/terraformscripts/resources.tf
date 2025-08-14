@@ -14,7 +14,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_key_pair" "my_key_pair" {
-  key_name   = "testkeygfg1"
+  key_name   = "MindScopeKey"
   public_key = file("./mykey.pub")
 }
 
@@ -74,6 +74,6 @@ resource "null_resource" "configureAnsibleInventory" {
 resource "null_resource" "destroy_resource" {
   provisioner "local-exec" {
     when    = destroy
-    command = "echo destroying resources.. > gfgdestroy.txt"
+    command = "echo destroying resources.. > mindscope.txt"
   }
 }

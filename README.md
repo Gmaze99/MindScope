@@ -48,10 +48,9 @@
 - ✅ Build React frontend
 - ✅ Dockerize apps
 - ✅ Local orchestration with docker-compose
-- ⬜ Provision CI Pipelines with Github Actions
+- ✅ Provision CI Pipelines with Github Actions
 - ⬜ Provision CD with Jenkins
 - ⬜ Provision EKS & RDS with Terraform
-- ⬜ Deploy to AWS
 - ⬜ Add monitoring & logging
 - ⬜ Integrate DevSecOps tools
 - ⬜ Polish UX & add stretch AI features
