@@ -15,23 +15,28 @@ spec:
         dc: "In"
     spec:
       containers:
-      - name: "myos"
-        image: jinny1/snakegame:latest
+      - name: "backend"
+        image: ashishdev213/wellness-backend
         imagePullPolicy: Always
         ports:
-        - containerPort: 5000 
+        - containerPort: 8000 
+      - name: "frontend"
+        image: ashishdev213/wellness-frontend
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000 
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: "mygfgservice"
+  name: "MindScopeService"
 spec:
   selector:
     dc: "In"
   ports:
-  - port: 5000
-    targetPort: 5000
+  - port: 3000
+    targetPort: 3000
     nodePort: 31933
   type: LoadBalancer
