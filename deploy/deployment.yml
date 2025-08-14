@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: "mindscopedep"
+  name: "gfgdeployment"
 spec: 
   replicas: 3
   selector:
@@ -15,28 +15,23 @@ spec:
         dc: "In"
     spec:
       containers:
-      - name: "backend"
-        image: ashishdev213/wellness-backend
+      - name: "myos"
+        image: jinny1/snakegame:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8000 
-      - name: "frontend"
-        image: ashishdev213/wellness-frontend
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3000 
+        - containerPort: 5000 
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: "mindscopeservice"
+  name: "mygfgservice"
 spec:
   selector:
     dc: "In"
   ports:
-  - port: 3000
-    targetPort: 3000
+  - port: 5000
+    targetPort: 5000
     nodePort: 31933
   type: LoadBalancer
