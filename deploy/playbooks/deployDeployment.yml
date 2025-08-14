@@ -12,7 +12,7 @@
         src: ../startservers.sh
         dest: startservers.sh
     - name: Check if Deployment exists
-      command: "kubectl get deployment MindScopeDeployment"
+      command: "kubectl get deployment mindscopedep"
       ignore_errors: true
       register: deployment_check
 
@@ -22,7 +22,7 @@
       ignore_errors: true
 
     - name: Rollout Deployment
-      command: "kubectl rollout restart deployment MindScopeDeployment"
+      command: "kubectl rollout restart deployment mindscopedep"
       when: deployment_check.rc == 0  # Deployment exists
       ignore_errors: true
       
