@@ -18,7 +18,7 @@
 |---------------|-------------------------------|
 | Frontend      | React (TypeScript)            |
 | Backend       | Python (FastAPI)              |
-| Database      | PostgreSQL (AWS RDS)          |
+| Database      | PostgreSQL          |
 | AI/NLP        | OpenAI / HuggingFace API      |
 | Containers    | Docker                        |
 | Orchestration | Kubernetes (AWS EKS)          |
@@ -49,9 +49,10 @@
 - ✅ Dockerize apps
 - ✅ Local orchestration with docker-compose
 - ✅ Provision CI Pipelines with Github Actions
-- ⬜ Provision CD with Jenkins
+- ✅ Provision CD with Jenkins
+- ✅ Add monitoring & logging
+- ⬜ Include AI Features
 - ⬜ Provision EKS & RDS with Terraform
-- ⬜ Add monitoring & logging
 - ⬜ Integrate DevSecOps tools
 - ⬜ Polish UX & add stretch AI features
 
