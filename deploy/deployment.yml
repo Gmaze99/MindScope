@@ -37,6 +37,6 @@ spec:
     dc: "In"
   ports:
   - port: 5000
-    targetPort: 5000
+    targetPort: 80
     nodePort: 31933
   type: LoadBalancer
