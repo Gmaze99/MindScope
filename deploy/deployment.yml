@@ -15,11 +15,16 @@ spec:
         dc: "In"
     spec:
       containers:
-      - name: "myos"
-        image: jinny1/snakegame:latest
+      - name: "frontend"
+        image: ashishdev213/wellness-frontend
         imagePullPolicy: Always
         ports:
         - containerPort: 5000 
+      - name: "backend"
+        image: ashishdev213/wellness-backend
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000 
 
 ---
 
