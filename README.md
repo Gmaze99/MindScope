@@ -38,9 +38,9 @@
 - ✅ Local orchestration with docker-compose
 - ✅ Provision CI Pipelines with Github Actions
 - ✅ Provision CD with Jenkins
-- ✅Provision EKS & RDS with Terraform
+- ✅Provision EKS with Terraform
 - ✅ Add monitoring & logging
-- ⬜ Include AI Features (Comming Soon)
+- ⬜ Include AI Features (Comming Soon...)
 
 
 ---
