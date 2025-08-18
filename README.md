@@ -18,26 +18,14 @@
 |---------------|-------------------------------|
 | Frontend      | React (TypeScript)            |
 | Backend       | Python (FastAPI)              |
-| Database      | PostgreSQL          |
-| AI/NLP        | OpenAI / HuggingFace API      |
+| Database      | PostgreSQL                    |
 | Containers    | Docker                        |
 | Orchestration | Kubernetes (AWS EKS)          |
 | CI            | GitHub Actions                |
 | CD            | Jenkins                       |
 | Infra         | Terraform, Ansible            |
-| Observability | Prometheus, Grafana, ELK      |
-| Security      | Trivy, Snyk, SonarQube, Bandit|
-
----
-
-## 🛡 DevSecOps Highlights
-- Dockerized backend & frontend
-- CI/CD pipeline: lint, test, security scans, build, deploy
-- Infrastructure as Code (Terraform) for AWS
-- Config mgmt with Ansible
-- Real-time monitoring (Prometheus, Grafana)
-- Log aggregation & analysis (ELK stack)
-- Security tools integrated throughout SDLC
+| Observability | Prometheus, Grafana           |
+| Security      | SonarQube                     |
 
 ---
 
@@ -50,17 +38,16 @@
 - ✅ Local orchestration with docker-compose
 - ✅ Provision CI Pipelines with Github Actions
 - ✅ Provision CD with Jenkins
+- ✅Provision EKS & RDS with Terraform
 - ✅ Add monitoring & logging
-- ⬜ Include AI Features
-- ⬜ Provision EKS & RDS with Terraform
-- ⬜ Integrate DevSecOps tools
-- ⬜ Polish UX & add stretch AI features
+- ⬜ Include AI Features (Comming Soon)
+
 
 ---
 
 ## 📊 Architecture
 
-> Diagrams coming soon in `/docs`
+![Architecture Diagram](image.png)
 
 ---
 
